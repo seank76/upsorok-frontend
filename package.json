@@ -1,0 +1,22 @@
+{
+  "name": "upsorok-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for UpSoRok project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seank76/upsorok-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seank76/upsorok-frontend/issues"
+  },
+  "homepage": "https://github.com/seank76/upsorok-frontend#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

@@ -5194,12 +5194,10 @@ var author$project$Update$update = F2(
 				elm$core$Platform$Cmd$none);
 		}
 	});
-var elm$html$Html$a = _VirtualDom_node('a');
 var elm$html$Html$div = _VirtualDom_node('div');
-var elm$html$Html$h2 = _VirtualDom_node('h2');
-var elm$html$Html$p = _VirtualDom_node('p');
+var elm$html$Html$h1 = _VirtualDom_node('h1');
+var elm$html$Html$h4 = _VirtualDom_node('h4');
 var elm$html$Html$section = _VirtualDom_node('section');
-var elm$html$Html$span = _VirtualDom_node('span');
 var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var elm$html$Html$text = elm$virtual_dom$VirtualDom$text;
 var elm$json$Json$Encode$string = _Json_wrap;
@@ -5211,6 +5209,105 @@ var elm$html$Html$Attributes$stringProperty = F2(
 			elm$json$Json$Encode$string(string));
 	});
 var elm$html$Html$Attributes$class = elm$html$Html$Attributes$stringProperty('className');
+var author$project$View$aboutSection = A2(
+	elm$html$Html$section,
+	_List_fromArray(
+		[
+			elm$html$Html$Attributes$class('slider d-flex align-items-center')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			elm$html$Html$div,
+			_List_fromArray(
+				[
+					elm$html$Html$Attributes$class('container')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$div,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$class('row d-flex justify-content-center')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$div,
+							_List_fromArray(
+								[
+									elm$html$Html$Attributes$class('col-md-12')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									elm$html$Html$div,
+									_List_fromArray(
+										[
+											elm$html$Html$Attributes$class('slider-title_box')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											elm$html$Html$div,
+											_List_fromArray(
+												[
+													elm$html$Html$Attributes$class('row')
+												]),
+											_List_fromArray(
+												[
+													A2(
+													elm$html$Html$div,
+													_List_fromArray(
+														[
+															elm$html$Html$Attributes$class('col-md-12')
+														]),
+													_List_fromArray(
+														[
+															A2(
+															elm$html$Html$div,
+															_List_fromArray(
+																[
+																	elm$html$Html$Attributes$class('slider-content_wrap')
+																]),
+															_List_fromArray(
+																[
+																	A2(
+																	elm$html$Html$h1,
+																	_List_Nil,
+																	_List_fromArray(
+																		[
+																			elm$html$Html$text('About Us')
+																		]))
+																]))
+														]))
+												]))
+										])),
+									A2(
+									elm$html$Html$div,
+									_List_fromArray(
+										[
+											elm$html$Html$Attributes$class('align-items-left white')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											elm$html$Html$h4,
+											_List_Nil,
+											_List_fromArray(
+												[
+													elm$html$Html$text('We strive to provide the best and latest infromation about the businesses you care about')
+												]))
+										]))
+								]))
+						]))
+				]))
+		]));
+var elm$html$Html$a = _VirtualDom_node('a');
+var elm$html$Html$h2 = _VirtualDom_node('h2');
+var elm$html$Html$p = _VirtualDom_node('p');
+var elm$html$Html$span = _VirtualDom_node('span');
 var elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		elm$html$Html$Attributes$stringProperty,
@@ -6652,7 +6749,7 @@ var author$project$View$navBarNav = A2(
 									_List_fromArray(
 										[
 											elm$html$Html$Attributes$class('nav-link'),
-											elm$html$Html$Attributes$href('#')
+											elm$html$Html$Attributes$href('#about')
 										]),
 									_List_fromArray(
 										[
@@ -6751,7 +6848,6 @@ var author$project$View$navMenu = A2(
 				]))
 		]));
 var elm$html$Html$form = _VirtualDom_node('form');
-var elm$html$Html$h1 = _VirtualDom_node('h1');
 var elm$html$Html$i = _VirtualDom_node('i');
 var elm$html$Html$input = _VirtualDom_node('input');
 var elm$html$Html$Attributes$placeholder = elm$html$Html$Attributes$stringProperty('placeholder');
@@ -6960,8 +7056,19 @@ var author$project$View$sliderSection = A2(
 		]));
 var author$project$View$view = function (model) {
 	return {
-		body: _List_fromArray(
-			[author$project$View$navMenu, author$project$View$sliderSection, author$project$View$findPlacesSection, author$project$View$featuredPlacesSection, author$project$View$categoriesSection]),
+		body: _Utils_ap(
+			_List_fromArray(
+				[author$project$View$navMenu]),
+			function () {
+				var _n0 = model.url.fragment;
+				if ((_n0.$ === 'Just') && (_n0.a === 'about')) {
+					return _List_fromArray(
+						[author$project$View$aboutSection]);
+				} else {
+					return _List_fromArray(
+						[author$project$View$sliderSection, author$project$View$findPlacesSection, author$project$View$featuredPlacesSection, author$project$View$categoriesSection]);
+				}
+			}()),
 		title: 'UpSoRok'
 	};
 };

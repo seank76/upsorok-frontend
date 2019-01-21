@@ -10,13 +10,43 @@ view : Model -> Browser.Document Msg
 view model =
     { title = "UpSoRok"
     , body =
-        [ navMenu
-        , sliderSection
-        , findPlacesSection
-        , featuredPlacesSection
-        , categoriesSection
-        ]
+        [ navMenu ]
+            ++ (case model.url.fragment of
+                    Just "about" ->
+                        [ aboutSection ]
+
+                    _ ->
+                        [ sliderSection
+                        , findPlacesSection
+                        , featuredPlacesSection
+                        , categoriesSection
+                        ]
+               )
     }
+
+
+aboutSection : Html Msg
+aboutSection =
+    section [ class "slider d-flex align-items-center" ]
+        [ div [ class "container" ]
+            [ div [ class "row d-flex justify-content-center" ]
+                [ div [ class "col-md-12" ]
+                    [ div [ class "slider-title_box" ]
+                        [ div [ class "row" ]
+                            [ div [ class "col-md-12" ]
+                                [ div [ class "slider-content_wrap" ]
+                                    [ h1 [] [ text "About Us" ] ]   
+                                ]
+                            ]
+                        ]
+                    , div [ class "align-items-left white" ]                               
+                        [ h4 [] 
+                             [ text "We strive to provide the best and latest infromation about the businesses you care about" ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
 
 
 categoriesSection : Html Msg
@@ -438,7 +468,7 @@ navBarNav =
                     , ALink "#" "Related"
                     ]
                 , li [ class "nav-item active" ]
-                    [ a [ class "nav-link", href "#" ]
+                    [ a [ class "nav-link", href "#about" ]
                         [ text "About" ]
                     ]
                 , li [ class "nav-item" ]

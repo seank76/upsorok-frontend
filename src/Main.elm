@@ -6,7 +6,7 @@ import Model.Main exposing (..)
 import Update exposing (..)
 import Url
 import View.Main exposing (..)
-
+import Dict exposing (Dict)
 
 
 -- MAIN
@@ -27,7 +27,6 @@ main =
 init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
 init flags url key =
     ( Model key url, Cmd.none )
-
 
 
 -- SUBSCRIPTIONS

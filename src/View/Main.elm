@@ -3,16 +3,18 @@ module View.Main exposing (view)
 import Browser
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Config exposing (..)
 import Model.Main exposing (ALink, Model, Msg)
 import View.About exposing (..)
 import View.Categories exposing (..)
 import View.FeaturedPlaces exposing (..)
 import View.FindPlaces exposing (..)
 import View.Slider exposing (..)
+import Dict exposing (Dict)
 
 view : Model -> Browser.Document Msg
 view model =
-    { title = "Upsorok"
+    { title = getConfig "title"
     , body =
         [ navMenu ]
             ++ (case model.url.fragment of

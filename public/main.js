@@ -5209,7 +5209,7 @@ var elm$html$Html$Attributes$stringProperty = F2(
 			elm$json$Json$Encode$string(string));
 	});
 var elm$html$Html$Attributes$class = elm$html$Html$Attributes$stringProperty('className');
-var author$project$View$Main$aboutSection = A2(
+var author$project$View$About$aboutSection = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -5297,7 +5297,14 @@ var author$project$View$Main$aboutSection = A2(
 											_List_Nil,
 											_List_fromArray(
 												[
-													elm$html$Html$text('\n                             "UpSoRok" means business directory in Korean.\n                             We strive to provide the best and latest infromation about the businesses you care about\n                             ')
+													elm$html$Html$text('"UpSoRok" means business directory in Korean.')
+												])),
+											A2(
+											elm$html$Html$h4,
+											_List_Nil,
+											_List_fromArray(
+												[
+													elm$html$Html$text('We strive to provide the best and latest information about the businesses you care')
 												]))
 										]))
 								]))
@@ -5314,7 +5321,7 @@ var elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
-var author$project$View$Main$categoriesSection = A2(
+var author$project$View$Categories$categoriesSection = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -5430,7 +5437,7 @@ var elm$html$Html$Attributes$src = function (url) {
 		'src',
 		_VirtualDom_noJavaScriptOrHtmlUri(url));
 };
-var author$project$View$Main$featuredPlacesSection = A2(
+var author$project$View$FeaturedPlaces$featuredPlacesSection = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -6141,7 +6148,7 @@ var author$project$View$Main$featuredPlacesSection = A2(
 var elm$html$Html$figcaption = _VirtualDom_node('figcaption');
 var elm$html$Html$figure = _VirtualDom_node('figure');
 var elm$html$Html$h5 = _VirtualDom_node('h5');
-var author$project$View$Main$findPlacesSection = A2(
+var author$project$View$FindPlaces$findPlacesSection = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -6618,11 +6625,10 @@ var author$project$View$Main$navMenuItem = F2(
 			_List_fromArray(
 				[
 					A2(
-					elm$html$Html$a,
+					elm$html$Html$div,
 					_List_fromArray(
 						[
 							elm$html$Html$Attributes$class('nav-link'),
-							elm$html$Html$Attributes$href('#'),
 							elm$html$Html$Attributes$id('navbarDropdownMenuLink'),
 							A2(elm$html$Html$Attributes$attribute, 'data-toggle', 'dropdown'),
 							A2(elm$html$Html$Attributes$attribute, 'aria-haspopup', 'true'),
@@ -6851,7 +6857,7 @@ var elm$html$Html$form = _VirtualDom_node('form');
 var elm$html$Html$i = _VirtualDom_node('i');
 var elm$html$Html$input = _VirtualDom_node('input');
 var elm$html$Html$Attributes$placeholder = elm$html$Html$Attributes$stringProperty('placeholder');
-var author$project$View$Main$sliderSection = A2(
+var author$project$View$Slider$sliderSection = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -7063,10 +7069,10 @@ var author$project$View$Main$view = function (model) {
 				var _n0 = model.url.fragment;
 				if ((_n0.$ === 'Just') && (_n0.a === 'about')) {
 					return _List_fromArray(
-						[author$project$View$Main$aboutSection]);
+						[author$project$View$About$aboutSection]);
 				} else {
 					return _List_fromArray(
-						[author$project$View$Main$sliderSection, author$project$View$Main$findPlacesSection, author$project$View$Main$featuredPlacesSection, author$project$View$Main$categoriesSection]);
+						[author$project$View$Slider$sliderSection, author$project$View$FindPlaces$findPlacesSection, author$project$View$FeaturedPlaces$featuredPlacesSection, author$project$View$Categories$categoriesSection]);
 				}
 			}()),
 		title: 'Upsorok'

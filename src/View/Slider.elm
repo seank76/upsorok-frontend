@@ -1,0 +1,53 @@
+module View.Slider exposing (sliderSection)
+
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Model.Main exposing (..)
+
+sliderSection : Html Msg
+sliderSection =
+    section [ class "slider d-flex align-items-center" ]
+        [ div [ class "container" ]
+            [ div [ class "row d-flex justify-content-center" ]
+                [ div [ class "col-md-12" ]
+                    [ div [ class "slider-title_box" ]
+                        [ div [ class "row" ]
+                            [ div [ class "col-md-12" ]
+                                [ div [ class "slider-content_wrap" ]
+                                    [ h1 []
+                                        [ text "Discover great businesses" ]
+                                    , h5 []
+                                        [ text "Let's uncover the best places to eat, drink, and shop nearest to you." ]
+                                    ]
+                                ]
+                            ]
+                        , div [ class "row d-flex justify-content-center" ]
+                            [ div [ class "col-md-10" ]
+                                [ Html.form [ class "form-wrap mt-4" ]
+                                    [ div [ class "btn-group", attribute "role" "group", attribute "aria-label" "Basic example" ]
+                                        [ input [ type_ "text", placeholder "What are your looking for?", class "btn-group1" ]
+                                            []
+                                        , input [ type_ "text", placeholder "New york", class "btn-group2" ]
+                                            []
+                                        , button [ type_ "submit", class "btn-form" ]
+                                            [ span [ class "icon-magnifier search-icon" ] []
+                                            , text "SEARCH"
+                                            , i [ class "pe-7s-angle-right" ]
+                                                []
+                                            ]
+                                        ]
+                                    ]
+                                , div [ class "slider-link" ]
+                                    [ a [ href "#" ]
+                                        [ text "Browse Popular" ]
+                                    , span [] [ text "or" ]
+                                    , a [ href "#" ]
+                                        [ text "Recently Added" ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]

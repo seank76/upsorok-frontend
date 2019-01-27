@@ -2,7 +2,7 @@ module Update exposing (update)
 
 import Browser
 import Browser.Navigation as Nav
-import Model exposing (Model, Msg(..))
+import Model.Main exposing (Model, Msg(..))
 import Url
 
 

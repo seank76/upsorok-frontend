@@ -2,10 +2,10 @@ module Main exposing (init, main, subscriptions)
 
 import Browser
 import Browser.Navigation as Nav
-import Model exposing (..)
+import Model.Main exposing (..)
 import Update exposing (..)
 import Url
-import View exposing (..)
+import View.Main exposing (..)
 
 
 

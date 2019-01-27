@@ -4310,7 +4310,7 @@ function _Browser_load(url)
 		}
 	}));
 }
-var author$project$Model$Model = F2(
+var author$project$Model$Main$Model = F2(
 	function (key, url) {
 		return {key: key, url: url};
 	});
@@ -4794,7 +4794,7 @@ var elm$core$Platform$Cmd$none = elm$core$Platform$Cmd$batch(_List_Nil);
 var author$project$Main$init = F3(
 	function (flags, url, key) {
 		return _Utils_Tuple2(
-			A2(author$project$Model$Model, key, url),
+			A2(author$project$Model$Main$Model, key, url),
 			elm$core$Platform$Cmd$none);
 	});
 var elm$core$Platform$Sub$batch = _Platform_batch;
@@ -4802,10 +4802,10 @@ var elm$core$Platform$Sub$none = elm$core$Platform$Sub$batch(_List_Nil);
 var author$project$Main$subscriptions = function (_n0) {
 	return elm$core$Platform$Sub$none;
 };
-var author$project$Model$LinkClicked = function (a) {
+var author$project$Model$Main$LinkClicked = function (a) {
 	return {$: 'LinkClicked', a: a};
 };
-var author$project$Model$UrlChanged = function (a) {
+var author$project$Model$Main$UrlChanged = function (a) {
 	return {$: 'UrlChanged', a: a};
 };
 var elm$browser$Browser$External = function (a) {
@@ -5209,7 +5209,7 @@ var elm$html$Html$Attributes$stringProperty = F2(
 			elm$json$Json$Encode$string(string));
 	});
 var elm$html$Html$Attributes$class = elm$html$Html$Attributes$stringProperty('className');
-var author$project$View$aboutSection = A2(
+var author$project$View$Main$aboutSection = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -5297,7 +5297,7 @@ var author$project$View$aboutSection = A2(
 											_List_Nil,
 											_List_fromArray(
 												[
-													elm$html$Html$text('We strive to provide the best and latest infromation about the businesses you care about')
+													elm$html$Html$text('\n                             "UpSoRok" means business directory in Korean.\n                             We strive to provide the best and latest infromation about the businesses you care about\n                             ')
 												]))
 										]))
 								]))
@@ -5314,7 +5314,7 @@ var elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
-var author$project$View$categoriesSection = A2(
+var author$project$View$Main$categoriesSection = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -5430,7 +5430,7 @@ var elm$html$Html$Attributes$src = function (url) {
 		'src',
 		_VirtualDom_noJavaScriptOrHtmlUri(url));
 };
-var author$project$View$featuredPlacesSection = A2(
+var author$project$View$Main$featuredPlacesSection = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -6141,7 +6141,7 @@ var author$project$View$featuredPlacesSection = A2(
 var elm$html$Html$figcaption = _VirtualDom_node('figcaption');
 var elm$html$Html$figure = _VirtualDom_node('figure');
 var elm$html$Html$h5 = _VirtualDom_node('h5');
-var author$project$View$findPlacesSection = A2(
+var author$project$View$Main$findPlacesSection = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -6581,11 +6581,11 @@ var author$project$View$findPlacesSection = A2(
 						]))
 				]))
 		]));
-var author$project$Model$ALink = F2(
+var author$project$Model$Main$ALink = F2(
 	function (link, name) {
 		return {link: link, name: name};
 	});
-var author$project$View$dropDownMenu = function (alink) {
+var author$project$View$Main$dropDownMenu = function (alink) {
 	return A2(
 		elm$html$Html$a,
 		_List_fromArray(
@@ -6607,7 +6607,7 @@ var elm$virtual_dom$VirtualDom$attribute = F2(
 	});
 var elm$html$Html$Attributes$attribute = elm$virtual_dom$VirtualDom$attribute;
 var elm$html$Html$Attributes$id = elm$html$Html$Attributes$stringProperty('id');
-var author$project$View$navMenuItem = F2(
+var author$project$View$Main$navMenuItem = F2(
 	function (name, alink) {
 		return A2(
 			elm$html$Html$li,
@@ -6646,12 +6646,12 @@ var author$project$View$navMenuItem = F2(
 							elm$html$Html$Attributes$class('dropdown-menu'),
 							A2(elm$html$Html$Attributes$attribute, 'aria-labelledby', 'navbarDropdownMenuLink')
 						]),
-					A2(elm$core$List$map, author$project$View$dropDownMenu, alink))
+					A2(elm$core$List$map, author$project$View$Main$dropDownMenu, alink))
 				]));
 	});
 var elm$html$Html$button = _VirtualDom_node('button');
 var elm$html$Html$Attributes$type_ = elm$html$Html$Attributes$stringProperty('type');
-var author$project$View$navBarNav = A2(
+var author$project$View$Main$navBarNav = A2(
 	elm$html$Html$div,
 	_List_fromArray(
 		[
@@ -6710,31 +6710,31 @@ var author$project$View$navBarNav = A2(
 					_List_fromArray(
 						[
 							A2(
-							author$project$View$navMenuItem,
+							author$project$View$Main$navMenuItem,
 							'Reviews',
 							_List_fromArray(
 								[
-									A2(author$project$Model$ALink, '#', 'Our Reviews'),
-									A2(author$project$Model$ALink, '#', 'Their Reviews'),
-									A2(author$project$Model$ALink, '#', 'Your Reviews')
+									A2(author$project$Model$Main$ALink, '#', 'Our Reviews'),
+									A2(author$project$Model$Main$ALink, '#', 'Their Reviews'),
+									A2(author$project$Model$Main$ALink, '#', 'Your Reviews')
 								])),
 							A2(
-							author$project$View$navMenuItem,
+							author$project$View$Main$navMenuItem,
 							'Write',
 							_List_fromArray(
 								[
-									A2(author$project$Model$ALink, '#', 'Your Review'),
-									A2(author$project$Model$ALink, '#', 'Corrections'),
-									A2(author$project$Model$ALink, '#', 'Random Thoughts')
+									A2(author$project$Model$Main$ALink, '#', 'Your Review'),
+									A2(author$project$Model$Main$ALink, '#', 'Corrections'),
+									A2(author$project$Model$Main$ALink, '#', 'Random Thoughts')
 								])),
 							A2(
-							author$project$View$navMenuItem,
+							author$project$View$Main$navMenuItem,
 							'Apps',
 							_List_fromArray(
 								[
-									A2(author$project$Model$ALink, '#', 'Menu'),
-									A2(author$project$Model$ALink, '#', 'Pics'),
-									A2(author$project$Model$ALink, '#', 'Related')
+									A2(author$project$Model$Main$ALink, '#', 'Menu'),
+									A2(author$project$Model$Main$ALink, '#', 'Pics'),
+									A2(author$project$Model$Main$ALink, '#', 'Related')
 								])),
 							A2(
 							elm$html$Html$li,
@@ -6803,7 +6803,7 @@ var author$project$View$navBarNav = A2(
 						]))
 				]))
 		]));
-var author$project$View$navMenu = A2(
+var author$project$View$Main$navMenu = A2(
 	elm$html$Html$div,
 	_List_fromArray(
 		[
@@ -6842,7 +6842,7 @@ var author$project$View$navMenu = A2(
 											elm$html$Html$Attributes$class('col-md-12')
 										]),
 									_List_fromArray(
-										[author$project$View$navBarNav]))
+										[author$project$View$Main$navBarNav]))
 								]))
 						]))
 				]))
@@ -6851,7 +6851,7 @@ var elm$html$Html$form = _VirtualDom_node('form');
 var elm$html$Html$i = _VirtualDom_node('i');
 var elm$html$Html$input = _VirtualDom_node('input');
 var elm$html$Html$Attributes$placeholder = elm$html$Html$Attributes$stringProperty('placeholder');
-var author$project$View$sliderSection = A2(
+var author$project$View$Main$sliderSection = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -7054,26 +7054,26 @@ var author$project$View$sliderSection = A2(
 						]))
 				]))
 		]));
-var author$project$View$view = function (model) {
+var author$project$View$Main$view = function (model) {
 	return {
 		body: _Utils_ap(
 			_List_fromArray(
-				[author$project$View$navMenu]),
+				[author$project$View$Main$navMenu]),
 			function () {
 				var _n0 = model.url.fragment;
 				if ((_n0.$ === 'Just') && (_n0.a === 'about')) {
 					return _List_fromArray(
-						[author$project$View$aboutSection]);
+						[author$project$View$Main$aboutSection]);
 				} else {
 					return _List_fromArray(
-						[author$project$View$sliderSection, author$project$View$findPlacesSection, author$project$View$featuredPlacesSection, author$project$View$categoriesSection]);
+						[author$project$View$Main$sliderSection, author$project$View$Main$findPlacesSection, author$project$View$Main$featuredPlacesSection, author$project$View$Main$categoriesSection]);
 				}
 			}()),
-		title: 'UpSoRok'
+		title: 'Upsorok'
 	};
 };
 var elm$browser$Browser$application = _Browser_application;
 var author$project$Main$main = elm$browser$Browser$application(
-	{init: author$project$Main$init, onUrlChange: author$project$Model$UrlChanged, onUrlRequest: author$project$Model$LinkClicked, subscriptions: author$project$Main$subscriptions, update: author$project$Update$update, view: author$project$View$view});
+	{init: author$project$Main$init, onUrlChange: author$project$Model$Main$UrlChanged, onUrlRequest: author$project$Model$Main$LinkClicked, subscriptions: author$project$Main$subscriptions, update: author$project$Update$update, view: author$project$View$Main$view});
 _Platform_export({'Main':{'init':author$project$Main$main(
 	elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)}});}(this));
